@@ -19,7 +19,6 @@ export const SearchPage = () => {
   const page = searchParams.get(PAGE);
 
   const payload = { key: searchParams.toString(), searchParams };
-  // const { data } = useGetSpecialistsQuery(payload, { refetchOnMountOrArgChange: true });
   useGetSpecialistsQuery(payload, { refetchOnMountOrArgChange: true });
 
   const data = useAppSelector(selectSpecialistsList);
